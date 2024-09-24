@@ -1,4 +1,4 @@
-use crate::service::example_service::ExempleService;
+use crate::service::example_service::ExampleService;
 
 /// Dependency to hold all Services. In order to be accessible in Controllers,
 /// Services must implement the FromRef trait (see ExampleService)

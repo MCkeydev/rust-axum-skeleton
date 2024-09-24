@@ -17,12 +17,10 @@ pub fn router() -> Router<AppState> {
 /// Attempt to find company information
 #[debug_handler]
 pub async fn example_controller_route(
-    State(company_info_service): State<ExampleService>,
-    Valid(Query(params)): Valid<Query<ExampleDto>>,
+    State(example_service): State<ExampleService>,
+    Valid(Query(_params)): Valid<Query<ExampleDto>>,
 ) -> ApiResult<Json<Example>> {
-    let example = example_service
-        .example_service_method(&params.url)
-        .await?;
+    let example = example_service.example_service_method().await?;
 
     Ok(Json(example))
 }

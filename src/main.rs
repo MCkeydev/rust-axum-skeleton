@@ -1,4 +1,4 @@
-use crate::controller::company_info_controller;
+use crate::controller::example_controller;
 use crate::service::service_bag::ServiceBag;
 use axum::Router;
 use tower_http::trace::TraceLayer;
@@ -23,7 +23,7 @@ async fn main() {
     // Define shared state of the application
     // Add all your controllers/routers
     let app = Router::new()
-        .nest("/", company_info_controller::router())
+        .nest("/", example_controller::router())
         .with_state(AppState {
             service_bag: ServiceBag::new(),
         })

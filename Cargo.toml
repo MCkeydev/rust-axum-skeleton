@@ -1,0 +1,19 @@
+[package]
+name = "rust-axum-skeleton"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7.5", features = ["macros", "json"] }
+axum-valid = "0.20.0"
+thiserror = "1.0.63"
+tokio = { version = "1.40.0", features = ["full"] }
+validator = { version = "0.18.1", features = ["derive"] }
+log = "0.4.22"
+serde = { version = "1.0.210", features = ["derive"] }
+tracing-subscriber = "0.3.18"
+tracing = "0.1.40"
+tower = "0.5.1"
+tower-http = { version = "0.5.2", features = ["trace"] }
+utoipa = { version = "4.2.3", features = ["axum_extras"] }
+anyhow = "1.0.89"
